@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "537de8e5-43a5-4577-9cc5-5613c52aaf3a",
+		"name": "testPostman",
+		"description": "Collection de tests pour la modification de l'application microcommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9090/Produits/parOrdreAlph",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9090/Produits/parOrdreAlph",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits",
+						"parOrdreAlph"
+					]
+				},
+				"description": "Le résultat doit être la liste des produits dans l'ordre alphabétique"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/AdminProduits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9090/AdminProduits",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				},
+				"description": "Doit retourner une liste de description des produits associés à la marge de chaque produit"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/Produits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 5,\n\t\"nom\" : \"poney\",\n\t\"prix\" : 0\n}"
+				},
+				"url": {
+					"raw": "localhost:9090/Produits",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Ajoute un objet gratuit, le résultat doit être un code HTTP 400 assorti d'un message d'erreur indiquant qu'il est impossible d'ajouter un produit gratuit"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9090/Produits",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 5,\n\t\"nom\" : \"poney\",\n\t\"prix\" : 0\n}"
+				},
+				"url": {
+					"raw": "localhost:9090/Produits",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Update un objet gratuit, le résultat doit être un code HTTP 400 assorti d'un message d'erreur indiquant qu'il est impossible d'ajouter un produit gratuit"
+			},
+			"response": []
+		}
+	]
+}
